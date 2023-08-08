@@ -1,7 +1,5 @@
 package com.example.smsstub.generic;
 
-
-
 public class GenericRequest<T> {
     private T data;
 

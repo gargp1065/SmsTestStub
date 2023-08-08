@@ -11,10 +11,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -23,7 +20,7 @@ import javax.servlet.http.HttpServletRequest;
 public class MetfoneSmsController {
 
     private static final Logger log = LogManager.getLogger(MetfoneSmsController.class);
-    @GetMapping("/apigw")
+    @PostMapping("/apigw")
     @JsonIgnore
     public ResponseEntity<MetfoneData> sendSms(@RequestBody String xmlRequest, @RequestParam(name="wsdl") final String wsdl,
                                                final HttpServletRequest request) {
