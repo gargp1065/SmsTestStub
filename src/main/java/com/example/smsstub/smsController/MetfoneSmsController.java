@@ -47,6 +47,7 @@ public class MetfoneSmsController {
             return xmlMapper.writeValueAsString(requestData);
         } catch (JsonProcessingException e) {
             e.printStackTrace();
+            System.out.println("sms stub");
         }
         return null;
     }
